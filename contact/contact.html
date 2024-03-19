@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北海道旅行記</title>
+
+<link href="../css/cssreset.css" rel="stylesheet" type="text/css">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../ico/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<header>
+  <div id="hdrArea">
+    <h1 class="siteTitle">
+      <a href="../index.html"><img src="../images/logo.png" alt=北海道旅行記"></a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="../sightseeing/sightseeing.html">観光</a></li>
+        <li><a href="../gourmet/gourmet.html">グルメ</a></li>
+        <li><a href="../event/event.html">イベント</a></li>
+        <li><a href="../hotel/hotel.html">宿泊施設</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--header-->
+
+<main>
+    <div class="wrapper">
+        <ul id="topicPath">
+            <li><a href="../index.html">HOME&nbsp;&gt;</a></li>
+          <li>お問い合わせ</li>
+        </ul>
+        <!--topic path-->
+    
+    <section id="contactForm" class="wrapper">
+        <h2 class="sectionTitle">Contact</h2>
+        <div class="content">
+           <h2> <p class="text">ご要望はこちらから</p></h2>
+          
+            <hr class="contactHr">
+           
+            <form id="mainForm">
+            <table>
+              <tbody>
+                <tr>
+                  <th>お名前　<span class="small">※必須</span></th>
+                  <td><input class="inputArea" type="text" required placeholder="田中ようこ"></td>
+                </tr>
+                <tr>
+                  <th>Eメール　<span class="small">※必須</span></th>
+                  <td><input class="inputArea" type="text" required placeholder=sample@test.com></td>
+                </tr>
+                <tr>
+                  <th>電話番号</th>
+                  <td><input class="inputArea" type="text"required placeholder=000-0000-0000></td>
+                　<!--<td><input class="inputArea" type="text" placeholder="半角でご入力ください"/></td>-->
+                </tr>
+                <tr>
+                  <th>お問い合わせ内容</th>
+                  <td><select name="Type">
+                          <option value="選択してください"></option>
+		 				 <option value="意見・質問">ご意見・ご質問</option>
+                         <option value="感想">ご感想</option>
+                          
+                          <option value="その他のお問い合わせ">その他</option>
+                      </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>メッセージ<span class="small">※必須</span></th>
+                  <td><textarea name="お問い合わせ内容" required ></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="mainFormBtn">
+              <input class="inputSend" type="submit" value="Submit" />
+            </div>
+            </form>
+        </div>
+    </section>
+    </div>
+     
+</main>
+<!--main-->
+    
+<footer id="footer">
+  <div class="footerSitemap">
+      <a href="../index.html" class="siteMap"><small>HOME</small></a>
+      <a href="../sightseeing/sightseeing.html" class="siteMap"><small>観光</small></a>
+      <a href="../gourmet/gourmet.html" class="siteMap"><small>グルメ</small></a>
+      <a href="../event/event.html" class="siteMap"><small>イベント</small></a>
+      <a href="../hotel/hotel.html" class="siteMap"><small>宿泊施設</small></a>
+      <a href="contact.html" class="siteMap"><small>お問い合わせ</small></a>
+  </div>
+  <small class="copyRight">&copy; Paplica</small>
+</footer>
+<!--footer-->
+      
+</body>
+</html>
