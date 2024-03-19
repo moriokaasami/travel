@@ -1,0 +1,933 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+	color: #222;
+	background-color: #fff;
+	font-size: 13px;
+	font-family: fave-script-pro, sans-serif, Spartan, Meiryo UI, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	letter-spacing: 0.05em;
+    line-height: 1.5em;}
+
+
+/****************************************
+
+                header
+
+*****************************************/
+header {
+    width: 100%;
+    height: 120px;
+    color: #222;
+}
+
+#hdrArea {
+	height: 50px;
+	margin: 0 auto;
+    display: flex;                   /* h1とnavを横並びに配置 */
+    justify-content: space-between;  /* /* 各アイテムを均等に配置し最初のアイテムは先頭に寄せ、 最後のアイテムは末尾に寄せる */ 
+    align-items: center;             /* 高さを中央でそろえる */
+}
+
+.siteTitle img{
+    width: 35%;
+    margin-top: 40px;
+   }
+
+
+#hdrArea h1 {
+    padding: 10px 0;
+}
+
+#hdrArea nav ul  {
+	width: 600px;
+	height: 30px;
+    display: flex;
+    padding: 10px 0;
+    list-style-type: none;
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 0.5px;
+	text-align: center;
+    float:right;
+   /*border:solid 1px #000;               わかりやすいように枠線をつけるあとで消す*/
+}
+
+#hdrArea nav ul li {
+	width: 200px;
+	height: 30px;
+	text-align: center;
+    font-family: Spartan;
+   }
+
+   #hdrArea nav ul li a {
+	color: #24292e;
+	text-decoration: none;
+	display: block;	
+}
+
+#hdrArea nav ul li a:hover {
+    opacity: 0.7;
+}
+
+.fas {
+    font-weight: 900;
+}
+.fa-globe:before {
+    content: "\f0ac";
+}
+.fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fas {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+
+/****************************************
+
+             main contents
+
+*****************************************/
+main {
+	width: 100%;
+	height: auto;
+	text-shadow: 1px 1px #FFF9F9;
+}
+main #event
+{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.imageBox img {
+	width: 100%;
+    max-height: 700px; 
+    object-fit: cover;  /* 横幅は画面サイズにあわせて伸縮 */
+    max-width: 1920px;  /* 画像の横幅サイズにあわせて最大幅を指定 */
+    
+}
+
+.wrapper {
+    width: 920px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+   }
+
+section.wrapper, .imageBox{             /* ここから下からフェードインCSS　*/
+    animation-name: fadeup;                        
+    animation-duration: 1.5s;/*1 回のアニメーション周期が完了するまでの所要時間1.5s */
+}
+    @keyframes fadeup {
+    from {
+        opacity: 0; /*完全に透明にする*/
+        transform: translateY(20px);/*要素をY軸方向へ20PX平行移動*/
+}
+    to {
+        opacity: 1;/*完全に不透明にする*/
+        transform: translateY(0);　/*要素をY軸方向へ平行移動*/
+}
+}                                       /* ここまで下からフェードインCSS　*/
+
+.fadein {　　　　　　　　　　　　　　　　　　　/* フェードインJavaScript　*/
+  opacity : 0;
+  transform: translateY(80px);
+  transition: 2s;
+}
+
+.wrapper #topicPath {
+	height: 20px;
+	margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 50px;
+    padding: 0;
+	list-style-type: none;
+    display: flex;
+    font-size: 20px;
+}
+
+.wrapper #topicPath li {
+    padding: 0;
+	letter-spacing: 0px;
+    margin-right: 5px;
+    font-size: 80%
+}
+
+.wrapper #topicPath li a  {
+    color: #818181;
+    text-decoration: none;
+}
+
+.wrapper #topicPath li a:hover  {
+    text-decoration: none;
+    opacity: 70%;
+} 
+
+.wrapper #indextopicPath {           /* indexのパンくずリストを狭くする */
+	width: 880px;
+	height: 0px;
+	margin-bottom: 0px;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding: 0;
+	text-align: left;
+    list-style-type: none;
+    display: flex;
+}
+
+.wrapper #indextopicPath li {
+    padding: 0;
+	letter-spacing: 0px;
+    margin-right: 5px;
+    font-size: 0%
+}                                    /* indexのパンくずリストを狭くする */
+
+.sectionTitle {
+    display: inline-block;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    font-family: fave-script-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+section .wrapper {
+    display: flex;             /* 画像とテキストを横並びに配置 */
+    justify-content: center;
+    align-items: center;
+ }
+
+.content{
+    text-align: center;
+}
+
+ 
+#sightseeing .text {
+    text-align: left;
+}
+
+#topcolor1{
+    background-color: #e6e7d9;
+    margin:0 -100%;
+    padding:0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+#topcolor1 .text{
+    text-align: center;
+    font-size: 15px;
+ }
+
+#topcolor2{
+    background-color: #fff;
+    margin:0 -100%;
+    padding:0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+    font-size: 15px;
+}
+
+#topcolor2 .text{
+    text-align: center;
+    font-size: 15px;
+ }
+
+#event{
+    background-color: #2f68d2;
+    margin:0 -100%;
+    padding:0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+    
+}
+
+.link-text{
+    font-size:small
+}
+#bodyInside{
+    overflow-x: hidden;       /*ブロックレベル要素の内容が左右の境界からあふれた場合あふれた部分を消す*/
+}
+
+.eventImage img {
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;       /* 画像を丸く切り取る */
+    justify-content: center;
+	align-items: center;
+    
+}
+.hotelImage img {
+	margin: 0px 10px;
+    width: 300px;
+    height: 300px;
+    margin-left: 0px;
+	}  
+
+#event .content {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#event .text {
+    vertical-align: middle;
+}
+
+.seeMore img{
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 210px;
+    height: 140px;
+    }
+
+
+    
+/****************************************
+
+             footer
+
+*****************************************/
+
+footer {
+	margin-top:50px;
+    width: 100%;
+	height: 100px;
+    font-size: 1rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footerSitemap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 10px 0;
+}
+
+.footerSitemap a {
+    color: #24292e;
+    text-decoration: none;
+}
+
+.footerSitemap a:hover {
+    opacity: 0.7;
+}
+
+.siteMap {
+    padding: 0 20px;
+}
+
+/****************************************
+
+             sightseeing                                                                                
+*****************************************/
+#sightseeing{
+    background-color: #F5EDE2;
+    margin: 0 -100%;
+    padding: 0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+
+.sightseeingImage img {
+    width: 360px;    
+}
+
+.sightseeingName{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sightseeingTable{
+    border: solid 1.5px #222;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+
+.sightseeingTable th{
+    border: solid 1.5px #222;
+    width: 25%;
+    background-color: #efd9d1;
+    
+}
+
+.sightseeingTable td{
+    border: solid 1.5px #222;
+    width: 75%;
+    background-color: #f4eeed;
+    text-align: left;
+    padding: 7px 40px;
+    line-height: 30px;
+}
+
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+             gourmet                                                                                  
+
+*****************************************/
+#gourmet .text {
+     width: auto;
+     margin-left: 15px;
+     margin-right: 15px;
+	 text-align: left;
+  }
+
+#gourmet{
+    background-color: #F5EDE2;
+    margin: 0 -100%;
+    padding: 0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+.gourmetImage img {
+    width: 360px;
+    margin-left:0px;
+}
+.gourmetName{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+             event                                                                               
+*****************************************/
+#event.content {
+    margin-bottom: 100px;
+}
+
+.eventHr {
+    height: 1px;
+    border: none;
+    background-color: #E1E1E1;
+    margin: 10px 0;
+}
+
+#event.text{
+    text-align: left;
+    margin-left: 0;
+}
+
+.eventTitle{
+    text-align: left;
+    margin-top: 30px;
+    font-size: large;
+}
+
+.eventTable{
+    width: 80%;
+    margin: auto;
+    color: #222;
+    background-color: rgb(234, 236, 220);
+    border-collapse: collapse;
+    margin: 20px;
+    border: solid 1px #9b9898;
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,202,222,0.87) 47.15%,rgba(137,144,185,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,202,222,0.87) 47.15%,rgba(137,144,185,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,202,222,0.87) 47.15%,rgba(137,144,185,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(199,202,222,0.87) 47.15%,rgba(137,144,185,1.00) 100%);
+	}
+
+.snow {
+    /*雪の色*/
+    color: snow;
+    /*雪の大きさ*/
+    font-size: 10px;
+    /*初期位置*/
+    position: fixed;
+    top: -5%;
+    /*雪を適当な幅で降らせる*/
+    text-shadow:
+    5vw   -100px 2px,
+    10vw  -400px 3px,
+    20vw  -500px 4px,
+    30vw  -580px 1px,
+    39vw  -250px 2px,
+    42vw  -340px 5px,
+    56vw  -150px 2px,
+    63vw  -180px 0,
+    78vw  -220px 4px,
+    86vw  -320px 9px,
+    94vw  -170px 7px;
+    /*雪アニメーション1*/
+    animation: roll 5s linear infinite;
+  }
+    /*2つめの雪アニメーション*/
+   .snow2nd{animation: anim 8s linear infinite;}
+  
+  @keyframes roll {
+      0% {transform:rotate(0deg);}
+     90% {opacity:1;}
+     100% {transform:rotate(20deg);top:100%;opacity:0;}
+  }
+  @keyframes anim {
+    100% {color:transparent;top:150%;}
+  }
+  .eventTable th{  
+    padding: 10px 0;
+    width: 150px;
+    border: solid 2px #05439b;
+}
+
+.eventTable td{
+    width: 330px;
+	border: solid 2px #05439b;
+    
+}
+
+/****************************************
+
+             contact                                                                             
+
+*****************************************/
+
+#contactForm .content {
+    margin-bottom: 100px;
+}
+
+
+.contactType{
+    padding: 50px 90px 50px 0;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.emailAddress{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactHr {
+    height: 3px;
+    border: none;
+    background-color: #E1E1E1;
+}
+
+#mainForm {
+	width: 700px;
+	height:auto;
+	margin:0 auto;
+	padding:0 40px;
+}
+	
+#mainForm table {
+    width:100%;
+}
+
+#mainForm th {
+    height:50px;
+    padding:10px 5px;
+    text-align: left;
+}
+
+#mainForm td {
+    height:50px;
+}
+
+.inputArea {
+    width:400px;
+    min-height:40px;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+    font-size: 15px;
+} 
+
+.small {
+    color:#be0f0f;
+    font-size: 9px;
+}
+
+#mainForm select {
+    width:407px;
+    min-height:40px;
+    color: #818181;
+    font-size: 12px;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+}
+
+#mainForm textarea {
+    width:400px;
+    min-height:100px;
+    color: #818181;
+    font-size: 12px;
+    margin:10px 0 0;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+}
+
+.inputSend {
+    width:150px;
+    height: 50px;
+    margin:10px 0px 10px 0;
+    background-color: #5e5757;
+    color: #fff;
+    border: none;
+}
+
+.inputSend　a:hover {
+    background-color: #fff;
+    }
+
+input {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/****************************************
+
+            Hotels                                                                                 
+
+*****************************************/
+#hotel{
+    background-color: #F5EDE2;
+    margin: 0 -100%;
+    padding: 0 100%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+#hotel .text {
+    text-align: left;
+}
+
+.hotelImage img {
+    width: 360px; 
+}
+
+.hotelName{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+            @media
+
+*****************************************/
+
+@media screen and (max-width: 767px) {　
+    /****************************************
+  
+              index header @media                                                                        
+  
+    *****************************************/
+	
+    .slider img{
+		height:30%;
+	}
+
+    header {
+        width: 100%;
+        height: 200px;
+        color: #222;
+    }  
+      header #hdrArea {
+        width: 100%;
+        display: block;
+           
+      }
+      
+      #hdrArea {
+        max-width: 100%;
+          display: block;
+      }
+  
+      #hdrArea h1 {
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #hdrArea nav ul {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+     
+    #hdrArea nav li {
+        font-size: 0.5rem;
+        width: 60px;
+    }
+	
+    #hdrArea .siteTitle img{
+    width: 20%;
+    margin-top: 0px;
+   } 
+
+ 
+      
+       
+    /****************************************
+  
+              index @media                                                                    
+  
+    *****************************************/
+   
+    #mainImage img {
+        max-width: 7670px;  /* 画像の横幅サイズにあわせて最大幅を指定 */
+        height: 300px;
+        /* height: calc(100vh - 60px);  /* 画像の高さ
+	をブラウザ下いっぱいまで広げます */
+      }
+   
+       .wrapper {
+          width: 100%;
+          overflow-x: hidden;       /*ブロックレベル要素の内容が左右の境界からあふれた場合あふれた部分を消す*/
+       }
+       
+       .wrapper #topicPath{
+           width: auto;
+         }
+      section .content {
+        flex-direction: column;  /* 画像とテキストを縦並びに配置 */
+      }
+      
+      #about img {
+        margin-right: 0;
+      }
+      
+      .text {
+        font-size: 0.9rem;
+        width: 100%;
+        letter-spacing: 0.15em;
+        line-height: 30px;
+        margin: 10px 20px;
+        text-align: left; 
+        width: auto;
+        }
+      
+      
+      .sectionTitle {
+        display: block;
+        text-align: center;
+        margin: 20px 0 40px 10px;
+        font-size: 3rem;
+        padding-top: 40px;
+        }
+      
+    /****************************************
+  
+              sightseeing @media                                                                             
+  
+    *****************************************/
+    .sightseeingHr {
+      height: 1px;
+      border: none;
+      background-color: #E1E1E1;
+      margin-top: 0px;
+  }
+    #sightseeing .content {
+       display: block;
+       width: 100%;
+    }
+      
+    .sightseeingContent{
+      width: 100%;
+	
+    }
+  
+  
+    #sightseeing img{
+       width: 100%;             /* 画像を横幅いっぱいまで表示 */
+       margin-bottom: 30px;
+    }
+      
+     
+    #sightseeing .text {
+       width: auto;
+       margin-left: 15px;
+       margin-right: 15px;
+    }
+      
+    #sightseeing .sightseeingName{
+       display: block;      
+    }
+  
+ /****************************************
+  
+              event@media                                                                             
+  
+    *****************************************/	
+.eventTable{
+    width: auto;
+    margin: 0;
+	}
+	
+	
+	
+  /****************************************
+  
+              hotel@media                                                                             
+  
+    *****************************************/
+  
+    .hotelHr{
+      height: 1px;
+      border: none;
+      background-color: #EFEBEB;
+      margin-top: 30px;
+  }
+  
+    #hotel img{
+       width: 100%;             /* 画像を横幅いっぱいまで表示 */
+       margin-bottom: 30px;
+    }
+      
+    
+    #hotel .text{
+       width: auto;
+       margin-left: 15px;
+       margin-right: 15px;
+    }
+      
+    #hotel .hotelContent .hotelName{
+       display: block;
+	  font-size: 15px;
+    }
+	
+	 /****************************************
+  
+             gourmet@media                                                                             
+  
+    *****************************************/
+	
+	 #gourmet .gourmetContent .gourmetName{
+       display: block;
+	  font-size: 15px;
+    }
+   
+    /****************************************
+  
+              Contact @media
+  
+    *****************************************/
+  
+      .emailAddress{
+          font-size: 1rem;
+      }
+      
+      .emailSection{
+          flex-direction: column;  /* 画像を縦並びに配置 */ 
+      }
+  
+      .contactType{
+          padding-right: 0;
+          padding-bottom: 0;
+          flex-direction: column;  /* 画像を縦並びに配置 */ 
+      }
+      
+      #mainForm {
+          width: 100%;
+          padding:0;
+      }
+      
+      #mainForm tr, #mainForm th, #mainForm td{
+          display: block;
+                
+      }
+      
+      #mainForm tr{
+          text-align: left;
+      }
+      
+      #mainForm th{
+          height: 20px;
+          padding: 0;
+          margin-left: 20px;
+          margin-bottom: 10px;
+      }
+      
+      #mainForm td{
+          margin: 0 20px 40px 20px;
+         
+      }
+      
+      #mainFormBtn{
+          width: auto;
+      }
+      
+      
+      .inputArea{
+          width:100%;
+      }
+      
+      #mainForm select{
+          width: 100%;
+      }
+      
+      #mainForm textarea{
+          width: 100%;
+      }
+      
+      .inputSend {
+          margin:50px auto 0 auto;
+      }
+      
+      /****************************************
+  
+           footer @media
+  
+    *****************************************/
+       .footerSitemap {
+            font-size: 0.6rem;
+            width:100%;
+            display:block;
+        }
+    }
