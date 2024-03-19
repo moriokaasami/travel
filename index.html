@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北海道旅行記</title>
+<meta name="keywords" content="北海道,旅行記,ホテル">
+<meta name="description" content="北海道旅行記">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--css後で-->
+<link href="css/cssreset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<link rel="icon" href="ico/favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,<!--自動でスライダーを変更-->
+                pause: 5000,<!--5秒で変更-->
+            });
+        });
+</script>
+<!--スライドを表示するjquery-->
+
+</head>
+<body>
+<div id="bodyInside">
+<header>
+    <div id="hdrArea">
+    <h1 class="siteTitle">
+      <a href="index.html"><img src="images/logo1.png" alt="北海道ロゴ"></a>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="sightseeing/sightseeing.html">観光</a></li>
+        <li><a href="gourmet/gourmet.html">グルメ</a></li>
+        <li><a href="event/event.html">イベント</a></li>
+        <li><a href="hotel/hotel.html">宿泊施設</a></li>
+        <li><a href="contact/contact.html">お問い合わせ</a></li>
+      </ul>     
+    </nav>
+
+    <div class="lang">
+        <i class="fas fa-globe"></i>
+           <select name="language" onChange="location.href=value;">
+           <option >日本語</option>
+            <option value="en/index-en.html">English</option>
+        </select>
+    </div>
+  </div>
+</header>
+<!--header-->
+    
+<main>
+ <!--<div class="imageBox">
+      <img id="mainImage" src="images/mainimage.jpg" loading="lazy" alt="mainimage">
+    </div>-->
+  
+   <div class="imageBox">
+    <div class="slider">
+    
+        <img src="images/mainimage.jpg" width="400" height="700" alt="mainimage">
+        <img src="images/富士山飛行機.jpg" width="400" height="700" alt="富士山飛行機">
+        <img src="images/中島公園.jpg" width="400" height="700" alt="中島公園">
+        <img src="images/大通公園前.jpg" width="400" height="700" alt="大通公園前">
+        </div>
+         
+        <div class="wrapper">
+            <ul id="indextopicPath"><!--パンくずリスト小さく-->
+              <li>&nbsp;</li>        
+            </ul>
+     <!--topic path-->
+    
+    <div class="fadein">
+    <section id="topcolor2" class="wrapper">
+        <h2 class="sectionTitle">観光</h2>
+            <div class="content" class="fadein">
+                <p class="text">春夏秋冬と季節によって変わる魅力満載の札幌を観光しませんか？</p>
+            </div>
+
+        <h3 class="seeMore">
+            <a href="sightseeing/sightseeing.html"><img src="images/readmore1.png" alt="moreinformation"></a>
+        </h3>
+    </section>
+    </div>
+    <!--about-->
+    
+    <div class="fadein">
+    <section id="topcolor1" class="wrapper">
+        <h2 class="sectionTitle">グルメ</h2>
+            <div class="content">
+                <div class="gourmetImage">
+                    <img src="images/バターサンド.png" alt="バターサンド">
+                </div>
+               <p class="text">北の国ならではのグルメを紹介します。</p>
+            </div>
+        <h3 class="seeMore">
+            <a href="gourmet/gourmet.html"><img src="images/readmore1.png" alt="moreinformation"></a>
+        </h3>
+    </section>
+    </div>
+    <!--gourmet-->
+    
+    <div class="fadein">
+    <section id="topcolor2" class="wrapper">
+        <h2 class="sectionTitle">イベント</h2>
+            <div class="event">
+                <div class="eventImage">
+                    <p><img src="images/雪まつり2.jpg" alt="snowfestival>
+             </div>
+                <p class=" width="360" height="335"text"></p>
+                  <p>札幌といえば雪まつり<br>
+                  毎年２月のメインイベント<br>日程チェックはこちらから</p>
+                    </p>
+            </div>
+        <h3 class="seeMore">
+            <a href="event/event.html"><img src="images/readmore1.png" alt="moreinformation"></a>
+        </h3>
+    </section>
+    </div>
+    <!--event-->
+       
+   <div class="fadein">
+    <section id="topcolor1" class="hotel">
+        <h2 class="sectionTitle">宿泊施設</h2>
+            <div class="hotel">
+                <div class="hotelImage">
+                    <img src="images/トップページホテル.jpg" alt="hotel">
+             </div>
+                <p class="text">羽田空港近くのホテル、札幌のおすすめホテルの紹介です</p>
+            </div>
+            <h3 class="seeMore">
+            <a href="hotel/hotel.html"><img src="images/readmore1.png" alt="moreinformation"></a>
+            </h3>
+    </section>
+    </div>
+    <!--hotel-->                                                                                    
+    
+    <div class="fadein">
+    <section id="topcolor2" class="wrapper">
+        <h2 class="sectionTitle">お問い合わせ</h2>
+            <div class="content">
+                <p class="text">ご意見やご要望はこちらから</p>
+            </div>
+              <h3 class="seeMore">
+            <a href="contact/contact.html"><img src="images/readmore1.png" alt="moreinformation"></a>
+        </h3>
+    </section>
+</div>  
+</section>
+</main>
+<!--index-->
+    
+<footer id="footer">
+    <div class="footerSitemap">
+        <a href="index.html" class="siteMap"><small>HOME</small></a>
+        <a href="sightseeing/sightseeing.html" class="siteMap"><small>観光</small></a>
+        <a href="gourmet/gourmet.html" class="siteMap"><small>グルメ</small></a>
+        <a href="event/event.html" class="siteMap"><small>イベント</small></a>
+        <a href="hotel/hotel.html" class="siteMap"><small>宿泊施設</small></a>
+        <a href="contact/contact.html" class="siteMap"><small>お問い合わせ</small></a>
+    </div>
+    <small class="copyRight">&copy; Paplica</small>
+</footer>
+    
+<script src="JavaScript/script.js"></script>
+</body>
+</html>
