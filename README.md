@@ -1,2 +1,2 @@
 # travel
-旅行のHP
+* 旅行のHP
