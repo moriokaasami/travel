@@ -1,0 +1,886 @@
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+	color: #222;
+	background-color: #fff;
+	font-size: 13px;
+	font-family: fave-script-pro, sans-serif, Spartan, Meiryo UI, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	letter-spacing: 0.05em;
+    line-height: 1.5em;}
+
+/****************************************
+
+                header
+
+*****************************************/
+
+header {
+	width: 20%;
+	height: 80px;
+	color: #222;
+}
+#hdrArea {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+    display: flex;                   /* h1とnavを横並びに配置 */
+    justify-content: space-between;  /* 両端にそろえる */
+    align-items: center;             /* 高さを中央でそろえる */
+}
+
+.siteTitle{ 
+    float: none;
+}
+
+.siteTitle img{
+    width: 200px;
+	height: 200px;
+}
+
+#hdrArea h1 {
+    padding: 10px 0;
+}
+
+#hdrArea nav ul {
+	width: 600px;
+	height: 30px;
+    display: flex;
+    padding: 10px 0;
+    list-style-type: none;
+	font-size: 14px;
+	line-height: 30px;
+	letter-spacing: 0.5px;
+	text-align: center;
+    /*border:solid 1px #000;              わかりやすいように枠線をつける*/
+}
+
+#hdrArea nav ul li {
+	width: 200px;
+	height: 30px;
+	float: left;
+    font-family: Spartan;
+    /*font-family: adamina;*/
+    font-style: normal;
+    font-weight: 400;
+}
+
+#hdrArea nav ul li a {
+	color: #24292e;
+	text-decoration: none;
+	display: block;
+	
+}
+
+#hdrArea nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/****************************************
+
+             main contents
+
+*****************************************/
+
+main {
+	width: 100%;
+	height: auto;
+	text-shadow: 1px 1px #FFF9F9;
+}
+main #event
+{
+	width: 100%;
+	height: auto;
+	color:#fff;
+    text-shadow: none;
+}
+
+.imageBox img {
+	width: 100%;
+	max-height: 700px; 
+    object-fit: cover;  /* 横幅は画面サイズにあわせて伸縮 */
+    max-width: 1920px;  /* 画像の横幅サイズにあわせて最大幅を指定 */
+}
+
+.wrapper {
+    width: 920px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+}
+
+section.wrapper, .imageBox{             /* ここから下からフェードインCSS　*/
+    animation-name: fadeup;                        
+    animation-duration: 1.5s;
+}
+    @keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+}
+    to {
+        opacity: 1;
+        transform: translateY(0);
+}
+}                                       /* ここまで下からフェードインCSS　*/
+
+.fadein {　　　　　　　　　　　　　　　　　　　/* フェードインJavaScript　*/
+  opacity : 0;
+  transform: translateY(80px);
+  transition: 2s;
+}
+
+.wrapper #topicPath {
+	width: 880px;
+	height: 20px;
+	margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 0;
+	text-align: left;
+    list-style-type: none;
+    display: flex;
+}
+
+.wrapper #topicPath li {
+    padding: 0;
+	letter-spacing: 0px;
+    margin-right: 5px;
+    font-size: 80%
+}
+
+.wrapper #topicPath li a  {
+    color: #818181;
+    text-decoration: none;
+}
+
+.wrapper #topicPath li a:hover  {
+    text-decoration: none;
+    opacity: 70%;
+} 
+
+.wrapper #indextopicPath {           /* indexのパンくずリストを狭くする */
+	width: 880px;
+	height: 0px;
+	margin-bottom: 0px;
+    margin-left: 10px;
+    margin-top: 0px;
+    padding: 0;
+	text-align: left;
+    list-style-type: none;
+    display: flex;
+}
+
+.wrapper #indextopicPath li {
+    padding: 0;
+	letter-spacing: 0px;
+    margin-right: 5px;
+    font-size: 0%
+}                                    /* indexのパンくずリストを狭くする */
+
+.sectionTitle {
+    display: inline-block;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    font-family: fave-script-pro, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+section .wrapper {
+    display: flex;             /* 画像とテキストを横並びに配置 */
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.text {
+    font-size: 1rem;
+    width: 700px;
+    letter-spacing: 3px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+#sightseeing .text {
+    text-align: left;
+}
+
+#topcolor1{
+    background-color: #faf8f0;
+    margin:0 -200%;
+    padding:0 200%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+#topcolor2{
+    background-color: #fff;
+    margin:0 -200%;
+    padding:0 200%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+#event{
+    background-color: #2f68d2;
+    margin:0 -200%;
+    padding:0 200%;           /* 横幅いっぱいに背景色つける */
+    text-align: center;
+}
+
+.link-text{font-size:small
+}
+#bodyInside{
+    overflow-x: hidden;       /* 横幅いっぱいに背景色つける2*/
+}
+
+.eventImage img {
+    margin: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;       /* 画像を丸く切り取る */
+    margin-left: 0px;
+    
+}
+.hotelImage img {
+    width: 300px;
+    height: 300px;
+　   margin-left: 0px;
+}  
+
+
+#event .content {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#event .text {
+    vertical-align: middle;
+}
+
+.seeMore img{
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 210px;
+    height: 140px;
+    }
+
+    
+/****************************************
+
+             footer
+
+*****************************************/
+
+footer {
+	width: 100%;
+	height: 100px;
+    font-size: 1rem;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footerSitemap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 10px 0;
+}
+
+.footerSitemap a {
+    color: #24292e;
+    text-decoration: none;
+}
+
+.footerSitemap a:hover {
+    opacity: 0.7;
+}
+
+.siteMap {
+    padding: 0 20px;
+}
+
+.copyRight {
+    align-items: flex-end;
+}
+
+/****************************************
+
+             sightseeing                                                                                   
+
+*****************************************/
+
+.sightseeingImage img {
+    width: 360px;    
+}
+
+.sightseeingName{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sightseeingTable{
+    border: solid 1.5px #222;
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+
+.sightseeingTable th{
+    border: solid 1.5px #222;
+    width: 25%;
+    background-color: #efd9d1;
+}
+
+.sightseeingTable td{
+    border: solid 1.5px #222;
+    width: 75%;
+    background-color: #f4eeed;
+    text-align: left;
+    padding: 7px 42px;
+    line-height: 30px;
+}
+
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+             gourmet                                                                                  
+
+*****************************************/
+.gourmetImage img {
+    width: 360px;
+    height: 300px;
+　 margin-left:0px;
+}
+.gourmetName{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gourmetTable{
+    border: solid 1.5px #222;
+    width: 100%;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+
+.gourmetTable th{
+    border: solid 1.5px #222;
+    width: 25%;
+    background-color: #efd9d1;
+}
+
+.gourmetTable td{
+    border: solid 1.5px #222;
+    width: 75%;
+    background-color: #f4eeed;
+    text-align: left;
+    padding: 7px 42px;
+    line-height: 30px;
+}
+
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+             event                                                                                
+
+*****************************************/
+
+#event.content {
+    margin-bottom: 100px;
+}
+
+.eventHr {
+    height: 1px;
+    border: none;
+    background-color: #E1E1E1;
+    margin: 10px 0;
+}
+
+#event.text{
+    text-align: left;
+    margin-left: 0;
+}
+
+.eventTitle{
+    text-align: left;
+    margin-top: 30px;
+}
+
+.eventTable{
+    width: 80%;
+    margin: auto;
+    color:#222;
+    background-color: rgb(234, 236, 220);
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+.eventTable th{  
+    padding: 10px 0;
+    width: 150px;
+    border-bottom: dotted 3px #222;
+}
+
+.eventTable td{
+    width: 330px;
+    border-bottom: dotted 3px #222;
+}
+
+.snow {
+    /*雪の色*/
+    color: snow;
+    /*雪の大きさ*/
+    font-size: 10px;
+    /*初期位置*/
+    position: fixed;
+    top: -5%;
+    /*雪を適当な幅で降らせる*/
+    text-shadow:
+    5vw   -100px 2px,
+    10vw  -400px 3px,
+    20vw  -500px 4px,
+    30vw  -580px 1px,
+    39vw  -250px 2px,
+    42vw  -340px 5px,
+    56vw  -150px 2px,
+    63vw  -180px 0,
+    78vw  -220px 4px,
+    86vw  -320px 9px,
+    94vw  -170px 7px;
+    /*雪アニメーション1*/
+    animation: roll 5s linear infinite;
+  }
+    /*2つめの雪アニメーション*/
+   .snow2nd{animation: anim 8s linear infinite;}
+  
+  @keyframes roll {
+      0% {transform:rotate(0deg);}
+     90% {opacity:1;}
+     100% {transform:rotate(20deg);top:100%;opacity:0;}
+  }
+  @keyframes anim {
+    100% {color:transparent;top:150%;}
+  }
+
+/****************************************
+
+             contact                                                                             
+
+*****************************************/
+
+#contactForm .content {
+    margin-bottom: 100px;
+}
+
+.emailSection{
+    display: flex;
+}
+
+.contactType{
+    padding: 50px 90px 50px 0;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.emailAddress{
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactHr {
+    height: 1px;
+    border: none;
+    background-color: #E1E1E1;
+}
+
+#mainForm {
+	width: 700px;
+	height:auto;
+	margin:0 auto;
+	padding:0 40px;
+}
+	
+#mainForm table {
+    width:100%;
+}
+
+#mainForm th {
+    height:50px;
+    padding:10px 5px;
+    text-align: left;
+}
+
+#mainForm td {
+    height:50px;
+}
+
+.inputArea {
+    width:400px;
+    min-height:40px;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+    font-size: 15px;
+} 
+
+.small {
+    color:#ff6633;
+    font-size: 9px;
+}
+
+#mainForm select {
+    width:407px;
+    min-height:40px;
+    color: #818181;
+    font-size: 12px;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+}
+
+#mainForm textarea {
+    width:400px;
+    min-height:100px;
+    color: #818181;
+    font-size: 12px;
+    margin:10px 0 0;
+    padding:3px 0 3px 5px;
+    background-color: #dddcdc;
+    border: none;  
+}
+
+.inputSend {
+    width:150px;
+    height: 50px;
+    margin:10px 0px 10px 0;
+    background-color: #5e5757;
+    color: #fff;
+    border: none;
+}
+
+.inputSend　a:hover {
+    background-color: #fff;
+    }
+
+input {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/****************************************
+
+            Hotels                                                                                 
+
+*****************************************/
+
+.hotelImage img {
+    width: 360px;    
+}
+
+.hotelName{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ReturnTop{
+    font-size: 1rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: right;   
+}
+
+/****************************************
+
+            @media
+
+*****************************************/
+
+
+
+@media screen and (max-width: 767px) {　
+  /****************************************
+
+            index header @media                                                                        
+
+  *****************************************/
+
+    header #hdrArea {
+        width: 100%;
+        display: block;
+         
+    }
+    
+    #hdrArea {
+        width: 100%;
+        display: block;
+    }
+
+    #hdrArea h1 {
+        display: block;
+        margin-left: 20px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    #hdrArea nav ul {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+       
+    #hdrArea nav li {
+        font-size: 0.5rem;
+        width: 60px;
+    }
+    
+  /****************************************
+
+            index @media                                                                    
+
+  *****************************************/
+  
+   #mainImage img {
+     max-width: 600px;  /* 画像の横幅サイズにあわせて最大幅を指定 */
+     height: 450px;
+     /* height: calc(100vh - 60px);  /* 画像の高さをブラウザ下いっぱいまで広げます */
+   }
+
+    .wrapper {
+	   width: 100%;
+        /*overflow:hidden; */
+    }
+    
+    .wrapper #topicPath{
+        width: auto;
+    }
+    section .content {
+      flex-direction: column;  /* 画像とテキストを縦並びに配置 */
+    }
+    
+    #about img {
+      margin-right: 0;
+    }
+    
+    .text {
+      font-size: 0.9rem;
+      width: 100%;
+      letter-spacing: 0.15em;
+      line-height: 30px;
+      margin: 10px 20px;
+      text-align: left; 
+      width: auto;
+      }
+    
+    .sectionTitle {
+      display: block;
+      text-align: left;
+      margin: 20px 0 40px 10px;
+      font-size: 3rem;
+      padding-top: 40px;
+      }
+    
+  /****************************************
+
+            sightseeing @media                                                                             
+
+  *****************************************/
+  .sightseeingHr {
+    height: 1px;
+    border: none;
+    background-color: #E1E1E1;
+    margin-top: 30px;
+}
+  #sightseeing .content {
+     display: block;
+     width: 100%;
+  }
+    
+  .sightseeingContent{
+    width: 100%;
+  }
+
+
+  #sightseeing img{
+     width: 100%;             /* 画像を横幅いっぱいまで表示 */
+     margin-bottom: 30px;
+  }
+    
+  /* .text の幅   */ 
+  #map .text , #event .text , #event p , #contactForm .text{
+     margin-left: 10px;
+     margin-right: 10px;
+     width: auto;
+  }  
+    
+  #sightseeing .text {
+     width: auto;
+     margin-left: 15px;
+     margin-right: 15px;
+  }
+    
+  #sightseeing .sightseeingName{
+     display: block;      
+  }
+ /****************************************
+
+            event @media                                                                             
+
+  *****************************************/
+.timer{
+    font-size:50px;
+    color:blue;
+    font-weight:bold;    
+}
+/****************************************
+
+            hotel@media                                                                             
+
+  *****************************************/
+  .hotelHr{
+    height: 1px;
+    border: none;
+    background-color: #E1E1E1;
+    margin-top: 30px;
+}
+
+  #hotel img{
+     width: 100%;             /* 画像を横幅いっぱいまで表示 */
+     margin-bottom: 30px;
+  }
+    
+  /* .text の幅   */ 
+  #map .text , #event .text , #event p , #contactForm .text{
+     margin-left: 10px;
+     margin-right: 10px;
+     width: auto;
+  }  
+    
+  #hotel .text{
+     width: auto;
+     margin-left: 15px;
+     margin-right: 15px;
+  }
+    
+  #hotel .hotelName{
+     display: block;      
+  }
+
+  #hotel .hotelName{
+    display: block;      
+ }
+  /****************************************
+
+            Contact @media
+
+  *****************************************/
+
+    .emailAddress{
+        font-size: 1rem;
+    }
+    
+    .emailSection{
+        flex-direction: column;  /* 画像を縦並びに配置 */ 
+    }
+
+    .contactType{
+        padding-right: 0;
+        padding-bottom: 0;
+        flex-direction: column;  /* 画像を縦並びに配置 */ 
+    }
+    
+    #mainForm {
+	    width: 100%;
+	    padding:0;
+    }
+    
+    #mainForm tr, #mainForm th, #mainForm td{
+        display: block;
+              
+    }
+    
+    #mainForm tr{
+        text-align: left;
+    }
+    
+    #mainForm th{
+        height: 20px;
+        padding: 0;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #mainForm td{
+        margin: 0 20px 40px 20px;
+       
+    }
+    
+    #mainFormBtn{
+        width: auto;
+    }
+    
+    
+    .inputArea{
+        width:100%;
+    }
+    
+    #mainForm select{
+        width: 100%;
+    }
+    
+    #mainForm textarea{
+        width: 100%;
+    }
+    
+    .inputSend {
+        margin:50px auto 0 auto;
+    }
+    
+    /****************************************
+
+         footer @media
+
+  *****************************************/
+    
+    .footerSitemap {
+      font-size: 0.6rem;
+}
