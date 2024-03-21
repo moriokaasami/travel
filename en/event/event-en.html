@@ -1,0 +1,143 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hokkaido Travel Journal</title>
+
+<link href="../../css/cssreset.css" rel="stylesheet" type="text/css">
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="../../ico/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div id="bodyInside">
+  <div class="snow">●</div>
+  <div class="snow snow2nd">●</div>
+<header>
+  <div id="hdrArea">
+    <h1 class="siteTitle">
+      <a href="../index-en.html"><img src="../../images/logo1.png" alt="北海道ロゴ"></a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="../sightseeing/sightseeing-en.html">SIGHTSEEING</a></li>
+        <li><a href="../gourmet/gourmet-en.html">GOURMET</a></li>
+        <li><a href="event-en.html">EVENT</a></li>
+        <li><a href="../hotel/hotel-en.html">HOTELS</a></li>
+        <li><a href="../contact/contact.html">CONTACT</a></li>
+      </ul>     
+    </nav>
+  </div>
+</header>
+<!--header-->
+
+<main id="event">
+    <div class="wrapper">
+        <ul id="topicPath">
+            <li><a href="../index-en.html">HOME&nbsp;&gt;</a></li>
+          <li>EVENT</li>
+        </ul>
+        <!--topic path-->
+    
+     
+    <section id="event" class="wrapper">
+
+        <h2 class="sectionTitle">Snow Festival</h2>
+            <div class="content">
+                <div class=eventContent>
+     <p class="timer">
+     
+	  <h2>
+      <span id="days"></span>Days
+      <span id="hours"></span>Hours
+      <span id="min"></span>Minutes
+      <span id="sec"></span>Seconds
+	  </h2>
+    <h2>left for the event opening</h2>
+      </p>
+ </article>
+  <script>
+    'use strict';
+
+    function countdown(due){
+      const now = new Date();
+
+      const rest = due.getTime() - now.getTime();
+      const sec = Math.floor(rest/1000)%60;
+      const min = Math.floor(rest/1000/60)%60;
+      const hours=Math.floor(rest/1000/60/60)%24;
+      const days=Math.floor(rest/1000/60/60/24);
+      const count=[days,hours,min,sec];
+      return count;
+    }
+      let goal = new Date (2023,1,4);
+      <!--2月4日だけど始まりがゼロだから1マイナスして１にする-->
+      console.log(countdown(goal));
+
+      function recalc(){
+        const counter = countdown(goal);
+        document.getElementById('days').textContent = counter[0];
+        document.getElementById('hours').textContent = counter[1];
+        document.getElementById('min').textContent = String(counter[2]).padStart(2,'0');
+        document.getElementById('sec').textContent = String(counter[3]).padStart(2,'0');
+          refresh();
+      }
+      function refresh(){
+        setTimeout(recalc,1000);
+      }
+      recalc();
+  </script>
+                    <hr class="eventHr">
+                    <p class="eventTitle">&#9670;Details</p>
+          
+                    <div class="eventTable">
+                    <table>
+                        <tr class ="tableTitle">
+                            <th>Venue</th>
+                            <td colspan="2">Period</td>
+                        </tr>
+                        <tr>
+                            <th>Odori Site</th>
+                            <td>2/4[Sat]-2/11[Sat]</td>
+                            <td>Illumination will last until 22:00</td>
+                        <tr>
+                            <th>Susukino Site</th>
+                            <td>2/4[Sat]-2/11[Sat]</td>
+                            <td>Illumination will last until 23:00<br small>*Ends at 22:00 on the last day of the festival.</td>
+                        </tr>
+                       
+                    </table>
+                    
+
+                    </div>
+                  
+                    <div class="content">
+                      
+                
+                <div class="eventImage">
+                  <img src="../../images/雪まつり.jpg" alt="雪まつり">
+                  <img src="../../images/雪まつり2.jpg" alt="雪まつり2">
+                </div>  
+            </div>
+    </div>
+     
+</main>
+<!--main-->     
+    
+<footer id="footer">
+  <div class="footerSitemap">
+      <a href="index/index-en.html" class="siteMap"><small>HOME</small></a>
+      <a href="../sightseeing/sightseeing-en.html" class="siteMap"><small>SIGHTSEEING</small></a>
+      <a href="../gourmet/gourmet-en.html" class="siteMap"><small>GOURMET</small></a>
+      <a href="event-en.html" class="siteMap"><small>EVENT</small></a>
+      <a href="../hotel/hotel-en.html" class="siteMap"><small>HOTELS</small></a>
+      <a href="../contact/contact.html" class="siteMap"><small>CONTACT</small></a>
+  </div>
+  <small class="copyRight">&copy; Paplica</small>
+</footer>
+<!--footer-->
+    
+</body>
+</html>
